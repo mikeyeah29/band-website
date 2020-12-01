@@ -6,7 +6,7 @@
 
         <?php include('inc/_header.php'); ?>        
 
-        <div class="section section--hero">
+        <div class="section section--hero <?php if($section_promo) { echo 'has-promo'; } ?>">
             <div class="container d-flex justify-content-center">
 
                 <div class="justify-content-center align-self-center">
@@ -31,6 +31,18 @@
 
             </div>
         </div>
+
+        <?php if($section_promo) { ?>
+
+            <div class="section section--promo">
+                <div class="container text-center">
+
+                    <iframe src="<?php echo $promo_video; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+            </div>
+
+        <?php } ?>
 
         <div class="section section--photos bg-dark" id="photos">
             <div class="container">
